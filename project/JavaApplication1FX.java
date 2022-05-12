@@ -17,7 +17,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
@@ -26,9 +25,8 @@ import javafx.stage.Stage;
  */
 public class JavaApplication1FX extends Application {
      protected String path ;
-     
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primary) {
         FlowPane pane = new FlowPane();
         pane.setPadding(new Insets(20, 20, 20, 20));
         pane.setHgap(5);
@@ -44,11 +42,14 @@ public class JavaApplication1FX extends Application {
         
         Button ok=new Button("ok") ;
         
+        
         ok.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent t) {
                 System.out.println(textfiled.getText());
                 path=textfiled.getText();
+                primary.close();
+                
             }
         });
         
@@ -63,9 +64,9 @@ public class JavaApplication1FX extends Application {
         borderpane.setCenter(pane2);
         
           Scene scene=new Scene(borderpane,250,250);
-          primaryStage.setTitle("project");
-          primaryStage.setScene(scene);
-          primaryStage.show();
+          primary.setTitle("project");
+          primary.setScene(scene);
+          primary.showAndWait();
     }
         public String getPath(){
             return path;
