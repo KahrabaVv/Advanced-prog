@@ -54,8 +54,15 @@ public class JavaApplication1FX extends Application {
         });
         
         Button cancel=new Button("cancel") ;
-        CancelHAndlerClass handler2=new CancelHAndlerClass();
-        cancel.setOnAction(handler2);
+               cancel.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent t) {
+                System.out.println("cancel bottun is clicked") ;
+                primary.close();
+                
+            }
+        });
+      
         pane2.getChildren().addAll(ok ,cancel);
         pane2.setAlignment(Pos.CENTER);
         pane2.setSpacing(20);
@@ -75,18 +82,7 @@ public class JavaApplication1FX extends Application {
              this.path = path;
     }
     
-    
-    
 
-    class CancelHAndlerClass implements EventHandler<ActionEvent> {
-    
-    @Override 
-    public void handle (ActionEvent e ){
-    System.out.println("cancel bottun is clicked") ;
-    
-    }
- 
-    }
 
     /**
      * @param args the command line arguments

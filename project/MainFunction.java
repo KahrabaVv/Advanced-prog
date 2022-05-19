@@ -195,7 +195,7 @@ public class MainFunction {
             //loop and Create Fields with Parents name  Array [object1,object2,Field9 ,Field1,Field2]
             for (int j = io.get(i) + 1; true ; j++) {
                 XSSFRow tempRow = firstSheet.getRow(j);
-                if (tempRow == null ||  tempRow.getCell(0) == null){
+                 if (tempRow == null ||  tempRow.getCell(0) == null || (tempRow.getCell(0) != null && tempRow.getCell(1) == null)){
                     break;
                 }
                 Field field = getField(tempRow);
