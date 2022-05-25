@@ -23,8 +23,8 @@ import javafx.stage.Stage;
  *
  * @author Kerolossamehel-shaip
  */
-public class JavaApplication1FX extends Application {
-     protected String path ;
+public class UI_1_Path extends Application {
+     private String path ;
     @Override
     public void start(Stage primary) {
         FlowPane pane = new FlowPane();
@@ -33,7 +33,7 @@ public class JavaApplication1FX extends Application {
         pane.setVgap(5);
         // Place nodes in the pane
         TextField textfiled =new TextField() ;
-        pane.getChildren().addAll(new Label("please enter your path:"),
+        pane.getChildren().addAll(new Label("please enter the path of your file:"),
                 
         textfiled);
 
@@ -56,7 +56,7 @@ public class JavaApplication1FX extends Application {
         Button cancel=new Button("cancel") ;
                cancel.setOnAction(new EventHandler<ActionEvent>() {
             @Override
-            public void handle(ActionEvent t) {
+            public void handle(ActionEvent z) {
                 System.out.println("cancel bottun is clicked") ;
                 primary.close();
                 
@@ -73,14 +73,16 @@ public class JavaApplication1FX extends Application {
           Scene scene=new Scene(borderpane,250,250);
           primary.setTitle("project");
           primary.setScene(scene);
+          primary.setResizable(false);
           primary.showAndWait();
+          
     }
         public String getPath(){
             return path;
     }
-         public void setPath(){
+         public void setPath(String Path){
              this.path = path;
-    }
+    } 
     
 
 

@@ -42,7 +42,7 @@ public class DisplayAPI_GUI extends Application{
     public void start(Stage primaryStage) throws IOException{
         
                 // Reload services (APIs)
-            JavaApplication1FX x =new JavaApplication1FX();
+            UI_1_Path x =new UI_1_Path();
             x.start(new Stage());
            ArrayList<API> APIList = getApisFromExcel(x.getPath());
         // prepare the container of all project
