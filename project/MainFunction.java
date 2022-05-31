@@ -30,7 +30,6 @@ class API{
         this.requestUrl= requestUrl;
     }
 
-
     public String getName(){
         return name;
     }
@@ -46,9 +45,6 @@ class API{
     public void addfield(Field field){
         this.fields.add(field) ;
     }
-    
-
-
 }
 
 class Field{
@@ -110,10 +106,6 @@ class Obj extends Field{
 
 
 }
-
-
-
-
 public class MainFunction {
     public  static Field getField(XSSFRow tempRow){
         // we are getting each element of that row given from the excel sheet in the I/O fields
@@ -224,8 +216,6 @@ public class MainFunction {
             }
             // Add tempAPI in Apis
             apis.add(tempAPI);
-
-
 
         }
         return  apis;

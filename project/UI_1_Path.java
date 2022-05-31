@@ -85,7 +85,6 @@ public class UI_1_Path extends Application {
     } 
     
 
-
     /**
      * @param args the command line arguments
      */
@@ -93,7 +92,5 @@ public class UI_1_Path extends Application {
         launch(args);
     }
     
-
-
 
 }
